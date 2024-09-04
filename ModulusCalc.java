@@ -6,10 +6,18 @@ public class ModulusCalc {
         int number = 1234;
         int mod = 103;
 
-        /**
-         * Implement your algorithm for calculating the modulus of any number 
-         * without using the modulus operator.  For the above numbers, the result 
-         * should be 101.  Test your algorithm against other values too! 
-         */
+        ModulusCalc calculator = new ModulusCalc(); // Create an instance of the class
+
+        int result = calculator.findModulus(number, mod); // Call the method
+        System.out.println("The modulus is: " + result); // Output the result
+    }
+
+    public int findModulus(int dividend, int divisor) {
+        int result = dividend;
+        for (; result >= divisor; result -= divisor) {
+            // Subtract divisor from dividend until dividend is less than divisor
+        }
+        return result;
     }
 }
+
