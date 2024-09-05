@@ -12,8 +12,8 @@ import java.awt.event.ActionListener;
 public class ModulusCalc {
 
     // Find Modulus Method
-    public int findModulus(int dividend, int divisor) {
-        int result = dividend;
+    public long findModulus(long dividend, long divisor) {
+        long result = dividend;
         for (; result >= divisor; result -= divisor) {
             // Subtract divisor from dividend until dividend is less than divisor
         }
@@ -116,11 +116,11 @@ public class ModulusCalc {
             @Override
             public void actionPerformed(ActionEvent e) {
                 try {
-                    int number = Integer.parseInt(numberTextField.getText());
-                    int mod = Integer.parseInt(modTextField.getText());
+                    long number = Long.parseLong(numberTextField.getText());
+                    long mod = Long.parseLong(modTextField.getText());
 
                     ModulusCalc calculator = new ModulusCalc();
-                    int result = calculator.findModulus(number, mod);
+                    long result = calculator.findModulus(number, mod);
 
                     // Update result label
                     resultLabel.setText("Result: " + result);
